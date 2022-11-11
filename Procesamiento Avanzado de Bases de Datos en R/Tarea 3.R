@@ -58,5 +58,5 @@ tabla_1[39,5]#fila 39 corresponde al año 2020 y columna 5 al área de ciencias so
 # CIENCIAS SOCIALES
 # <dbl>
 #   1       1057.
-# Durante el año 2020 en el área de Ciencias Sociales, la diferencia del monto asignado para proyectos Fondecyt entre hombres y mujeres fue de 1057 (MILES $) a precios del ipc 2021.
+# Durante el año 2020 en el área de Ciencias Sociales, la diferencia del monto asignado para proyectos de investigación Fondecyt entre hombres y mujeres fue de 1057 (MILES $) a precios del ipc 2021.
 
