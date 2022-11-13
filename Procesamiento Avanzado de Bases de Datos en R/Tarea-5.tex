@@ -1,0 +1,353 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Tarea 5},
+  pdfauthor={Gino Ocampo},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Tarea 5}
+\author{Gino Ocampo}
+\date{2022-11-12}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+\end{verbatim}
+
+\begin{verbatim}
+## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.1     v dplyr   1.0.5
+## v tidyr   1.1.3     v stringr 1.4.0
+## v readr   1.4.0     v forcats 0.5.1
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(}\StringTok{"wesanderson"}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(}\StringTok{"cowplot"}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(}\StringTok{"lubridate"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'lubridate'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:cowplot':
+## 
+##     stamp
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     date, intersect, setdiff, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(}\StringTok{"viridis"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: viridisLite
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(}\StringTok{"ggdark"}\NormalTok{)}
+\NormalTok{path }\OtherTok{\textless{}{-}} \FunctionTok{url}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/mebucca/dar\_soc4001/master/slides/class\_12/covid\_data.csv"}\NormalTok{)}
+\CommentTok{\# leer archivo csv}
+\NormalTok{covid\_data }\OtherTok{\textless{}{-}} \FunctionTok{read\_delim}\NormalTok{(path, }\AttributeTok{delim=}\StringTok{";"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## -- Column specification --------------------------------------------------------
+## cols(
+##   .default = col_double(),
+##   iso_code = col_character(),
+##   continent = col_character(),
+##   location = col_character(),
+##   date = col_date(format = ""),
+##   icu_patients = col_logical(),
+##   icu_patients_per_million = col_logical(),
+##   hosp_patients = col_logical(),
+##   hosp_patients_per_million = col_logical(),
+##   weekly_icu_admissions = col_logical(),
+##   weekly_icu_admissions_per_million = col_logical(),
+##   weekly_hosp_admissions = col_logical(),
+##   weekly_hosp_admissions_per_million = col_logical(),
+##   total_tests = col_logical(),
+##   new_tests = col_logical(),
+##   total_tests_per_thousand = col_logical(),
+##   new_tests_per_thousand = col_logical(),
+##   new_tests_smoothed = col_logical(),
+##   new_tests_smoothed_per_thousand = col_logical(),
+##   tests_per_case = col_logical(),
+##   positive_rate = col_logical()
+##   # ... with 1 more columns
+## )
+## i Use `spec()` for the full column specifications.
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: 227986 parsing failures.
+##  row                      col           expected          actual         file
+## 2784 total_tests              1/0/T/F/TRUE/FALSE 143056.0        <connection>
+## 2784 total_tests_per_thousand 1/0/T/F/TRUE/FALSE 5.61            <connection>
+## 2784 tests_units              1/0/T/F/TRUE/FALSE tests performed <connection>
+## 2785 tests_units              1/0/T/F/TRUE/FALSE tests performed <connection>
+## 2786 tests_units              1/0/T/F/TRUE/FALSE tests performed <connection>
+## .... ........................ .................. ............... ............
+## See problems(...) for more details.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(covid\_data)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## spec_tbl_df[,50] [56,748 x 50] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ iso_code                          : chr [1:56748] "AFG" "AFG" "AFG" "AFG" ...
+##  $ continent                         : chr [1:56748] "Asia" "Asia" "Asia" "Asia" ...
+##  $ location                          : chr [1:56748] "Afghanistan" "Afghanistan" "Afghanistan" "Afghanistan" ...
+##  $ date                              : Date[1:56748], format: "2019-12-31" "2020-01-01" ...
+##  $ total_cases                       : num [1:56748] NA NA NA NA NA NA NA NA NA NA ...
+##  $ new_cases                         : num [1:56748] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ new_cases_smoothed                : num [1:56748] NA NA NA NA NA NA 0 0 0 0 ...
+##  $ total_deaths                      : num [1:56748] NA NA NA NA NA NA NA NA NA NA ...
+##  $ new_deaths                        : num [1:56748] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ new_deaths_smoothed               : num [1:56748] NA NA NA NA NA NA 0 0 0 0 ...
+##  $ total_cases_per_million           : num [1:56748] NA NA NA NA NA NA NA NA NA NA ...
+##  $ new_cases_per_million             : num [1:56748] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ new_cases_smoothed_per_million    : num [1:56748] NA NA NA NA NA NA 0 0 0 0 ...
+##  $ total_deaths_per_million          : num [1:56748] NA NA NA NA NA NA NA NA NA NA ...
+##  $ new_deaths_per_million            : num [1:56748] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ new_deaths_smoothed_per_million   : num [1:56748] NA NA NA NA NA NA 0 0 0 0 ...
+##  $ reproduction_rate                 : num [1:56748] NA NA NA NA NA NA NA NA NA NA ...
+##  $ icu_patients                      : logi [1:56748] NA NA NA NA NA NA ...
+##  $ icu_patients_per_million          : logi [1:56748] NA NA NA NA NA NA ...
+##  $ hosp_patients                     : logi [1:56748] NA NA NA NA NA NA ...
+##  $ hosp_patients_per_million         : logi [1:56748] NA NA NA NA NA NA ...
+##  $ weekly_icu_admissions             : logi [1:56748] NA NA NA NA NA NA ...
+##  $ weekly_icu_admissions_per_million : logi [1:56748] NA NA NA NA NA NA ...
+##  $ weekly_hosp_admissions            : logi [1:56748] NA NA NA NA NA NA ...
+##  $ weekly_hosp_admissions_per_million: logi [1:56748] NA NA NA NA NA NA ...
+##  $ total_tests                       : logi [1:56748] NA NA NA NA NA NA ...
+##  $ new_tests                         : logi [1:56748] NA NA NA NA NA NA ...
+##  $ total_tests_per_thousand          : logi [1:56748] NA NA NA NA NA NA ...
+##  $ new_tests_per_thousand            : logi [1:56748] NA NA NA NA NA NA ...
+##  $ new_tests_smoothed                : logi [1:56748] NA NA NA NA NA NA ...
+##  $ new_tests_smoothed_per_thousand   : logi [1:56748] NA NA NA NA NA NA ...
+##  $ tests_per_case                    : logi [1:56748] NA NA NA NA NA NA ...
+##  $ positive_rate                     : logi [1:56748] NA NA NA NA NA NA ...
+##  $ tests_units                       : logi [1:56748] NA NA NA NA NA NA ...
+##  $ stringency_index                  : num [1:56748] NA 0 0 0 0 0 0 0 0 0 ...
+##  $ population                        : num [1:56748] 38928341 38928341 38928341 38928341 38928341 ...
+##  $ population_density                : num [1:56748] 54.4 54.4 54.4 54.4 54.4 ...
+##  $ median_age                        : num [1:56748] 18.6 18.6 18.6 18.6 18.6 18.6 18.6 18.6 18.6 18.6 ...
+##  $ aged_65_older                     : num [1:56748] 2.58 2.58 2.58 2.58 2.58 ...
+##  $ aged_70_older                     : num [1:56748] 1.34 1.34 1.34 1.34 1.34 ...
+##  $ gdp_per_capita                    : num [1:56748] 1804 1804 1804 1804 1804 ...
+##  $ extreme_poverty                   : num [1:56748] NA NA NA NA NA NA NA NA NA NA ...
+##  $ cardiovasc_death_rate             : num [1:56748] 597 597 597 597 597 ...
+##  $ diabetes_prevalence               : num [1:56748] 9.59 9.59 9.59 9.59 9.59 9.59 9.59 9.59 9.59 9.59 ...
+##  $ female_smokers                    : num [1:56748] NA NA NA NA NA NA NA NA NA NA ...
+##  $ male_smokers                      : num [1:56748] NA NA NA NA NA NA NA NA NA NA ...
+##  $ handwashing_facilities            : num [1:56748] 37.7 37.7 37.7 37.7 37.7 ...
+##  $ hospital_beds_per_thousand        : num [1:56748] 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 ...
+##  $ life_expectancy                   : num [1:56748] 64.8 64.8 64.8 64.8 64.8 ...
+##  $ human_development_index           : num [1:56748] 498 498 498 498 498 498 498 498 498 498 ...
+##  - attr(*, "problems")= tibble[,5] [227,986 x 5] (S3: tbl_df/tbl/data.frame)
+##   ..$ row     : int [1:227986] 2784 2784 2784 2785 2786 2787 2788 2789 2790 2791 ...
+##   ..$ col     : chr [1:227986] "total_tests" "total_tests_per_thousand" "tests_units" "tests_units" ...
+##   ..$ expected: chr [1:227986] "1/0/T/F/TRUE/FALSE" "1/0/T/F/TRUE/FALSE" "1/0/T/F/TRUE/FALSE" "1/0/T/F/TRUE/FALSE" ...
+##   ..$ actual  : chr [1:227986] "143056.0" "5.61" "tests performed" "tests performed" ...
+##   ..$ file    : chr [1:227986] "<connection>" "<connection>" "<connection>" "<connection>" ...
+##  - attr(*, "spec")=
+##   .. cols(
+##   ..   iso_code = col_character(),
+##   ..   continent = col_character(),
+##   ..   location = col_character(),
+##   ..   date = col_date(format = ""),
+##   ..   total_cases = col_double(),
+##   ..   new_cases = col_double(),
+##   ..   new_cases_smoothed = col_double(),
+##   ..   total_deaths = col_double(),
+##   ..   new_deaths = col_double(),
+##   ..   new_deaths_smoothed = col_double(),
+##   ..   total_cases_per_million = col_double(),
+##   ..   new_cases_per_million = col_double(),
+##   ..   new_cases_smoothed_per_million = col_double(),
+##   ..   total_deaths_per_million = col_double(),
+##   ..   new_deaths_per_million = col_double(),
+##   ..   new_deaths_smoothed_per_million = col_double(),
+##   ..   reproduction_rate = col_double(),
+##   ..   icu_patients = col_logical(),
+##   ..   icu_patients_per_million = col_logical(),
+##   ..   hosp_patients = col_logical(),
+##   ..   hosp_patients_per_million = col_logical(),
+##   ..   weekly_icu_admissions = col_logical(),
+##   ..   weekly_icu_admissions_per_million = col_logical(),
+##   ..   weekly_hosp_admissions = col_logical(),
+##   ..   weekly_hosp_admissions_per_million = col_logical(),
+##   ..   total_tests = col_logical(),
+##   ..   new_tests = col_logical(),
+##   ..   total_tests_per_thousand = col_logical(),
+##   ..   new_tests_per_thousand = col_logical(),
+##   ..   new_tests_smoothed = col_logical(),
+##   ..   new_tests_smoothed_per_thousand = col_logical(),
+##   ..   tests_per_case = col_logical(),
+##   ..   positive_rate = col_logical(),
+##   ..   tests_units = col_logical(),
+##   ..   stringency_index = col_double(),
+##   ..   population = col_double(),
+##   ..   population_density = col_double(),
+##   ..   median_age = col_double(),
+##   ..   aged_65_older = col_double(),
+##   ..   aged_70_older = col_double(),
+##   ..   gdp_per_capita = col_double(),
+##   ..   extreme_poverty = col_double(),
+##   ..   cardiovasc_death_rate = col_double(),
+##   ..   diabetes_prevalence = col_double(),
+##   ..   female_smokers = col_double(),
+##   ..   male_smokers = col_double(),
+##   ..   handwashing_facilities = col_double(),
+##   ..   hospital_beds_per_thousand = col_double(),
+##   ..   life_expectancy = col_double(),
+##   ..   human_development_index = col_double()
+##   .. )
+\end{verbatim}
+
+\hypertarget{ejercicio}{%
+\subsubsection{Ejercicio}\label{ejercicio}}
+
+Usando \textbf{Rmarkdown}, produce un reporte lo más parecido posible al
+documento que estás leyendo. La figura a continuación usa un
+\textbf{theme} y una paleta de colores de tu preferencia.
+\textbf{Pista}: mi paleta de colores está definida por la siguiente
+linea de código: \textbf{scale\_color\_viridis(trans = ``date'', option
+= ``plasma'')} y mi theme es \textbf{dark\_theme\_gray()}, del paquete
+\textbf{library(``ggdark'')}. Ambos ejes están graficados en escala
+log10.
+
+\end{document}
