@@ -1,45 +1,60 @@
 ---
 title: "Tarea 5"
 author: "Gino Ocampo"
-date: '2022-11-12'
+date: 'Noviembre 2022'
 output:
   pdf_document: default
   html_document: default
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-```{r}
+Ponderación: 12% de la nota final del curso Formato: Desarrollar esta tarea en un RScript, agregando comentarios cuando sea necesario.
+
+## Instrucciones:
+
+Usa el siguiente código para cargar la base de datos sobre Covid-19 usados en clase y seleccionar sólo las variables numéricas más el identificador de continente.
+
+```{r, echo=TRUE, eval=FALSE, warning=FALSE, message=FALSE}
 library("tidyverse")
 library("wesanderson")
 library("cowplot")
 library("lubridate")
 library("viridis")
 library("ggdark")
+library("ggplot2")
 path <- url("https://raw.githubusercontent.com/mebucca/dar_soc4001/master/slides/class_12/covid_data.csv")
 # leer archivo csv
 covid_data <- read_delim(path, delim=";")
-
-str(covid_data)
 ```
-### Ejercicio
 
-Usando **Rmarkdown**, produce un reporte lo más parecido posible al documento que estás leyendo.
-La figura a continuación usa un **theme** y una paleta de colores de tu preferencia. **Pista**: mi paleta de
-colores está definida por la siguiente linea de código: **scale_color_viridis(trans = "date", option = "plasma")** y mi theme es **dark_theme_gray()**, del paquete **library("ggdark")**. Ambos ejes están graficados
-en escala log10.
+```{r, echo=FALSE, eval=TRUE}
+
+#No funciona Knit, envío el documento en PDF que se ejecuta con addins-> Infinite Moon Reader!!!
+
+print(covid_data)
+```
 
 
-```{r, eval=TRUE}
-ggplot(covid_data, aes(x=new_cases_smoothed_per_million, y= new_deaths_per_million, group=date(), colour=date))+
-  geom_point(alpha= 0.5)+
-  geom_jitter(alpha= 0.5)+
+
+## Ejercicio
+
+Usando `Rmarkdown`, produce un reporte lo más parecido posible al documento que estás leyendo. La figura a continuación usa un `theme` y una paleta de colores de tu preferencia. **Pista**: mi paleta de colores está definida por la siguiente linea de código: `scale_color_viridis(trans = "date", option = "plasma")` y mi theme es `dark_theme_gray()`, del paquete `library("ggdark")`. Ambos ejes están graficados en escala log10.
+
+```{r,echo=FALSE, eval=TRUE, warning=FALSE, message=FALSE}
+
+
+covid_data %>% filter(continent=="Europe") %>% 
+ggplot(aes(x= log(new_cases_smoothed_per_million, base = exp(1)), y= log(new_deaths_smoothed_per_million,  base = exp(1)), group=date, colour=date))+
+  geom_jitter (alpha=0.1 , width= 5, height=15)+
   scale_color_viridis(trans = "date", option = "plasma")+
-  dark_theme_gray()
-  
+  dark_theme_gray()+
+  labs(title="Covid-19 in Europe",
+       x="New cases smoothed per million",
+       y="New deaths smoothed per million")
+
 ```
-
-
